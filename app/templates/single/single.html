@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title%} Character Card {% endblock %}
+{% block content %}
+    <br>
+    <div class="row justify-content-center">
+        <div class="card text-warning bg-dark mb-3 col-4">
+                <img class="card-img-top" src="{{ character.image }}" alt="{{ character.name }}">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="{{ url_for('authentication.single_character', id=character.id) }}">
+                            {{ character.name }}  | Character ID: {{character.character_id}}
+                        </a>
+                    </h4>
+                <p class="card-text">{{ character.description }}</p>
+            </div>
+        </div> 
+    </div>
+{% endblock %}

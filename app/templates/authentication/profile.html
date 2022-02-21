@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title%} Profile {% endblock %}
+{% block content %}
+
+<hr class="top">
+
+<div class="row justify-content-center">
+    <div class="col-2">
+        <img src="{{ url_for('static',filename='images/avatar2.png') }}" class="avatar img-fluid" alt="">
+    </div>
+    <div class="col-4">
+        <form action="{{ url_for('authentication.profile') }}" method="POST">
+        
+            <div class="form-group">
+                <input type="text" class="form-control" value="{{ current_user.first_name }}" name="first_name" placeholder="First Name" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" value="{{ current_user.last_name }}" name="last_name" placeholder="Last Name" />
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" value="{{ current_user.email }}" name="email" placeholder="Email" />
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" />
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password2" placeholder="Confirm Password" />
+            </div>
+            <input type="submit" value="Update" class="btn btn-info btn-block" id="all_buttons"/>
+        
+        </form>
+    </div>
+</div>
+
+{% endblock %}

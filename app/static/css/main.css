@@ -1,0 +1,71 @@
+.logo {
+    height: 40px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: red;
+}
+footer {
+    padding: 10px 0;
+    color: #fefe33;
+    font-family: 'Shadows Into Light', cursive;
+    background-color: black;
+}
+main {
+    padding: 25px 0;
+}
+.unique-list {
+    margin-bottom: 10px;
+}
+.main_heading {
+    font-family: 'Shadows Into Light', cursive;
+    color: #fefe33;
+    font-weight: bold;
+}
+.separator {
+    background-color: #fefe33;
+}
+.profile-posts {
+    margin-top: 25px;
+}
+.top {
+    background-color: #FE2905;
+    width: 0;
+}
+#page_text {
+    color: #fefe33;
+    font-family: 'Shadows Into Light', cursive;
+}
+.image {
+    height: 90vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero_text {
+    position: absolute;
+    color: #fefe33;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    justify-content: center;
+    font-size: 100px;
+    font-weight: bold;
+    transform: translate(-50%, -110%);
+    font-family: 'Shadows Into Light', cursive;
+}
+#all_buttons {
+    background-color: black;
+    color: #fefe33;
+    font-family: 'Shadows Into Light', cursive;
+}
+.avatar {
+    height: 60%;
+    width: 60%;
+    background-color: #148496;
+    border-radius: 50%;
+    border: #fefe33 2px inset;
+}

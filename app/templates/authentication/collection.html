@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title%} Collection {% endblock %}
+{% block content %}
+
+<hr class="top">
+<div class="row justify-content-center">
+    <div class="col-4">
+        <form action="{{ url_for('authentication.collection') }}" method="POST">
+            <h3 class="main_heading">Search for a character and add to your collection!</h3>
+            <div class="form-group">
+                <input type="text" class="form-control" name="character_name" placeholder="Character Name" />
+            </div>
+            <input type="submit" value="Add Character" class="btn btn-info btn-block" id="all_buttons" />
+        </form>
+        <hr class="separator"/>
+    </div>
+</div>
+
+<div class="row">
+    {% for character in characters %}
+        {% if character.user_id == current_user.id %}
+            <div class="card card text-warning bg-dark mb-3 col-3">
+                <img class="card-img-top" src="{{ character.image }}" alt="{{ character.name }}">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="{{ url_for('authentication.single_character', id=character.id) }}">
+                            {{ character.name }}
+                        </a>
+                    </h4>
+                    <p class="card-text">{{ character.super_power }}</p>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock %}
