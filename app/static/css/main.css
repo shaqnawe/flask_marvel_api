@@ -1,3 +1,37 @@
+.navbar-dark .navbar-nav .nav-link, nav h3 {
+    color: #fefe33;
+    font-family: 'Shadows Into Light', cursive;
+}
+nav h3:hover {
+    color: red;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: red;
+}
+.navbar-dark .navbar-nav .active>.nav-link {
+    color: #fefe33;
+    font-family: 'Shadows Into Light', cursive;
+}
+.navbar-dark .navbar-nav .active>.nav-link:hover {
+    color: red;
+}
+.navbar {
+    background-color: black !important;
+}
+.form-control {
+    background-color: #fefe33;
+    color: black;
+    font-weight: bold;
+    font-family: 'Shadows Into Light', cursive;
+}
+input[type=submit].btn-block {
+    background-color: black;
+    color: #fefe33;
+    font-family: 'Shadows Into Light', cursive;
+}
+input[type=submit].btn-block:hover {
+    color: red;
+}
 .logo {
     height: 40px;
 }
@@ -13,6 +47,9 @@ footer {
     color: #fefe33;
     font-family: 'Shadows Into Light', cursive;
     background-color: black;
+}
+span.signature:hover {
+    color:red;
 }
 main {
     padding: 25px 0;
@@ -35,10 +72,6 @@ main {
     background-color: #FE2905;
     width: 0;
 }
-#page_text {
-    color: #fefe33;
-    font-family: 'Shadows Into Light', cursive;
-}
 .image {
     height: 90vh;
     width: 100%;
@@ -47,20 +80,28 @@ main {
 }
 .hero_text {
     position: absolute;
-    color: #fefe33;
+    color: red;
     top: 30%;
     left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
     font-size: 100px;
     font-weight: bold;
-    transform: translate(-50%, -110%);
     font-family: 'Shadows Into Light', cursive;
+    text-transform: uppercase;
+    transition: 0.5s;
+    opacity: 0.6;
+    text-shadow: 2px 2px #fefe33;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
-#all_buttons {
-    background-color: black;
+h1:hover {
+    letter-spacing: 5px;
+    text-shadow: 2px 2px #F4A460;
     color: #fefe33;
-    font-family: 'Shadows Into Light', cursive;
 }
 .avatar {
     height: 60%;
@@ -68,4 +109,29 @@ main {
     background-color: #148496;
     border-radius: 50%;
     border: #fefe33 2px inset;
+}
+button.btn.btn-info.btn-block {
+    background-color: black;
+    color: #fefe33;
+    font-family: 'Shadows Into Light', cursive;
+}
+button.btn.btn-info.btn-block:hover {
+    color: red
+}
+.d-flex {
+    color: black;
+    font-family: 'Shadows Into Light', cursive;
+}
+p.card-text {
+    color: black;
+}
+h4.card-title a{
+    color: #FE2905;
+    text-decoration: none;
+}
+.card{
+    background-color: #fefe33 !important;
+}
+.profile {
+    align-items: center;
 }

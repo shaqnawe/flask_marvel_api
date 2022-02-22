@@ -5,23 +5,23 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
+        {% if current_user.is_authenticated %}
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            {% if current_user.is_authenticated %}
                 <li class="nav-item active">
-                    <a class="nav-link" id="page_text" href="{{ url_for('home.home') }}">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ url_for('home.home') }}">Home <span class="sr-only">(current)</span></a>
                 </li>
-            {% else %}
-                <h3 id="page_text">Login or Register to create your collection!</h3>
-            {% endif %}
         </ul>
+            {% else %}
+                <h3>Login or Register to create your collection!</h3>
+            {% endif %}
         <ul class="navbar-nav ml-auto">
             {% if not current_user.is_authenticated %}
-                <li class="nav-item"><a id="page_text" href="{{ url_for('authentication.login') }}" class="nav-link">Login</a></li>
-                <li class="nav-item"><a id="page_text" href="{{ url_for('authentication.register') }}" class="nav-link">Register</a></li>
+                <li class="nav-item"><a href="{{ url_for('authentication.login') }}" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="{{ url_for('authentication.register') }}" class="nav-link">Register</a></li>
             {% else %}
-                <li class="nav-item"><a id="page_text" href="{{ url_for('authentication.profile') }}" class="nav-link">Profile</a></li>
-                <li class="nav-item"><a id="page_text" href="{{ url_for('authentication.collection') }}" class="nav-link">Collection</a></li>
-                <li class="nav-item"><a id="page_text" href="{{ url_for('authentication.logout') }}" class="nav-link">Logout</a></li>
+                <li class="nav-item"><a href="{{ url_for('authentication.profile') }}" class="nav-link">Profile</a></li>
+                <li class="nav-item"><a href="{{ url_for('authentication.collection') }}" class="nav-link">Collection</a></li>
+                <li class="nav-item"><a href="{{ url_for('authentication.logout') }}" class="nav-link">Logout</a></li>
             {% endif %}
         </ul>
     </div>
